@@ -1,0 +1,21 @@
+{{>partials/header}}
+	
+	<p>Ola senhor {{ name }} Você tem {{ age }} anos? </p>
+	{{#showOld}}
+		como vai a vida?
+	{{/showOld}}
+
+	<hr>
+	<h2>Produtos</h2>
+	<ul>
+		{{#products}}
+			<li> {{title}} - R${{price}} </li>
+		{{/products}}
+		{{^products}}
+			<h1 style="color: red;">Não ha produtos Hoje </h1>
+		{{/products}}
+	</ul>
+
+
+
+	{{>partials/footer}}
